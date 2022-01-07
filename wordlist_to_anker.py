@@ -23,42 +23,16 @@ def tension_anchorage_length():
     concrete_class_input = input("Введите класс бетона (от B3.5 до B100)    ")
     reinforcement_class_input = input("Введите класс арматуры (только A240, А400, А500)    ")
     rebar_diameter = int(input("Введите диаметр арматуры (до 40Ø)    "))
-    if rebar_diameter <= 32 and reinforcement_class_input == "A240":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
+    if concrete_class_Rt.get(concrete_class_input) and reinforcement_class.get(reinforcement_class_input):
+        As = round(((math.pi * rebar_diameter ** 2) / 4), 2)
         μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A240"] * coefficient_two["ø <= 32"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A240"] * As)/(Rbond * μs)
-        return L0an
-    elif rebar_diameter <= 32 and reinforcement_class_input == "A400":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
-        μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A400"] * coefficient_two["ø <= 32"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A400"] * As)/(Rbond * μs)
-        return L0an
-    elif rebar_diameter <= 32 and reinforcement_class_input == "A500":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
-        μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A500"] * coefficient_two["ø <= 32"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A500"] * As)/(Rbond * μs)
-        return L0an
-    elif (36 <= rebar_diameter <= 40) and reinforcement_class_input == "A240":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
-        μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A240"] * coefficient_two["36 and 40"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A240"] * As)/(Rbond * μs)
-        return L0an
-    elif (36 <= rebar_diameter <= 40) and reinforcement_class_input == "A400":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
-        μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A400"] * coefficient_two["36 and 40"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A400"] * As)/(Rbond * μs)
-        return L0an
-    elif (36 <= rebar_diameter <= 40) and reinforcement_class_input == "A500":
-        As = round(((math.pi * rebar_diameter**2)/4), 2)
-        μs = round((math.pi * rebar_diameter), 2)
-        Rbond = coefficient_one["A500"] * coefficient_two["36 and 40"] * concrete_class_Rt[concrete_class_input]
-        L0an = (reinforcement_class["A500"] * As)/(Rbond * μs)
-        return L0an
-    else:
-        L0an = 0
-        return L0an
+        if rebar_diameter <= 32:
+            Rbond = coefficient_one[reinforcement_class_input] * coefficient_two["ø <= 32"] * concrete_class_Rt[concrete_class_input]
+            L0an = (reinforcement_class[reinforcement_class_input] * As)/(Rbond * μs)
+            return L0an
+        elif 36 <= rebar_diameter <= 40:
+            Rbond = coefficient_one[reinforcement_class_input] * coefficient_two["36 and 40"] * concrete_class_Rt[concrete_class_input]
+            L0an = (reinforcement_class[reinforcement_class_input] * As)/(Rbond * μs)
+            return L0an
+    L0an = 0
+    return L0an
