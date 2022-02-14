@@ -7,7 +7,7 @@
 В данной программе расчет выполняется для классов бетона от B3.5 до B100, классов арматуры A240, A400, A500 и до 40∅ арматуры включительо, остальные классы бетона, арматуры и диаметр арматуры не учитываются и возможно будут добавлены при необходимости, т.к. в СП 63.13330.2018 остальные диамтеры не не нормируются и в современном строительстве редко встречаются.
 Для правильной работы программы необходимо использовать заглавные латинские буквы, точки для разделения десятичных чисел, а также корректные классы бетона и арматуры, иначе программа будет выводить ошибку о неккореректном вводе, что в свою очередь защищает пользователя от возможности допустить ошибку в расчете. Все расчеты базовой длины анкеровки производятся автоматически до того момента, как пользователю необходимо ввести расчетную и фактическую площадь арматуры.
 
-Вспомогательная информация:
+# Вспомогательная информация:
 # Rbond = η1 * n2 * Rt
 # η1 - для ненапрягаемой арматуры: 1,5 - для гладкой арматуры;
 # 2,0 - для холоднодеформируемой арматуры периодического профиля;
@@ -30,7 +30,7 @@ By means of this calculation it is possible to reduce anchoring length necessary
 In this program calculation is carried out for concrete classes from B3.5 to B100, classes of fittings A240, A400, A500 and up to 40 ∅ fittings vklyuchitelyo, other classes of concrete, fittings and diameter of fittings are not considered and will be perhaps added if necessary since in the joint venture 63.13330.2018 other diamter are normalized and in modern construction seldom meet.
 For the correct work of the program it is necessary to use capital Latin letters, points for division of decimal numbers and also correct classes of concrete and fittings, otherwise the program will remove mistake about nekkorerektny input that in turn protects the user from opportunity to make mistake in calculation. All calculations of basic length of anchoring are made automatically until as the user needs to enter the rated and actual area of fittings.
 
-Auxiliary information:
+#Auxiliary information:
 # Rbond = η1 * n2 * Rt
 # η1 - for not strained fittings: 1.5 - for smooth fittings;
 #2.0 - for holodnodeformiruyemy fittings of periodic profile;
