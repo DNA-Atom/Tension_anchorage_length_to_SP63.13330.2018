@@ -27,6 +27,7 @@ def concrete_class_check():
             return dictionaries_for_work_on_concrete_calculation.concrete_class_Rt.get(concrete_class_input)
         else:
             print('Неверно веден класс бетона, введите корректное значение')
+            continue
 
 # Функция reinforcement_class_check проверяет, что значение класса арматуры введенное пользователем истино (существует ли в словаре) 
 # и возвращает значение для ключа, которое необходимо для расчета анкеровки, 
@@ -39,6 +40,7 @@ def reinforcement_class_check():
             return dictionaries_for_work_on_concrete_calculation.reinforcement_class.get(reinforcement_class_input), reinforcement_class_input
         else:
             print('\nНеверно веден класс арматуры, введите корректное значение')
+            continue
 
 # Функция tension_anchorage_length делает расчет базовой длины анкеровки, небходимой для расчетной анкеровки, которая вложена в программу Anker.py 
 
