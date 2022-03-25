@@ -64,7 +64,7 @@ def tension_anchorage_length():
                     Rbond = coefficient_one[reinforcement_class_input] * coefficient_two["36 and 40"] * concrete
                     L0an = (reinforcement * As)/(Rbond * μs)
                     return L0an
-        except:
+        except Exception:
             time.sleep(1)
             print ('Неверно веден диаметр арматуры, введите корректное значение')
             continue
