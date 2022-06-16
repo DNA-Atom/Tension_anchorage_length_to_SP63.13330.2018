@@ -24,8 +24,8 @@ coefficient_two = {"ø <= 32": 1, "36 and 40": 0.9}
 def concrete_class_check():
     while True:
         concrete_class_input = input("\nВведите класс бетона (от B3.5 до B100)    ")
-        if concrete_class_input in dictionaries_for_work_on_concrete_calculation.concrete_class_Rt:
-            return dictionaries_for_work_on_concrete_calculation.concrete_class_Rt.get(concrete_class_input)
+        if concrete_class_input in dictionaries_for_work_on_concrete_calculation.concrete_class_Rbt:
+            return dictionaries_for_work_on_concrete_calculation.concrete_class_Rbt.get(concrete_class_input)
         else:
             time.sleep(1)
             print('Неверно веден класс бетона, введите корректное значение')
